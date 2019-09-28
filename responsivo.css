@@ -1,1 +1,347 @@
+/*configuração da primeira parte vista do site*/
 
+@media screen and (max-width: 1490px){
+	#mainTitle {
+		left: 0;
+		right: 0;
+	}
+	nav {
+		position: absolute;
+		top: 76px;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width: 1280px) {
+	/*Primeira seção*/
+	section .rooms {
+		width: 900px;
+	}
+	.rooms h3 {
+		font-size: 2.5em;
+	}
+	.rooms p {
+		font-size: 15px;
+	}
+	.rooms a {
+		width: 100px;
+		font-size: 15px;
+	}
+	#news .newsContent , #newsForm {
+		width: 400px;
+	}
+	#news .newsContent p {
+		font-size: 14px;
+		width: 210px;
+	}
+	.newsContent h3 {
+		font-size: 37px;
+	}
+	#news #newsForm #newsNome , #newsEmail {
+		height: 25px;
+	}
+	#news #newsForm #newsSubmit {
+		padding: 3px 15px;
+	}
+	section article .content {
+		width: 800px;
+		padding: 15px 0 0 0;
+		display: flex;
+		flex-direction: column;
+	}
+	article .content .title-content {
+		width: 100%;
+	}
+	article .content .title-content span {
+		font-size: 2.5em;
+	}
+	article .content .title-content p {
+		font-size: 15px;
+		margin: 0 25px;
+	}
+	.errorNameMsg , .errorEmailMsg {
+		font-size: 13px;
+	}
+	#mainFooter {
+		width: 840px;
+	}
+	
+}
+@media screen and (max-width: 1000px) {
+	#headerContent header {
+		padding: 10px 25px;
+	}	
+	#mainTitle {
+		position: absolute;
+		left: 10px;
+	}
+	.interationArea {
+		right: 10px;
+	}
+	nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		/*background: transparent*/
+		height: 100vh;
+		width: 100%;
+		flex-direction: column;
+		z-index: 99;
+		/*direita e top*/
+		clip-path: circle(100px at 105% -10%); 
+		-webkit-clip-path: circle(100px at 105% -10%);
+
+		/*transition-property: all consome mt recurso*/
+		/*adicionar ao transition caso aumente a performace background 500ms ease-out*/
+		transition: clip-path 1s ease-out;
+		pointer-events: none;
+	}
+	nav ul {
+		display: flex;
+		flex-direction: column;
+		width: 80%;
+		margin: 0 auto;
+		opacity: 0;
+		transition: opacity 0.5s ease 0.4s;
+	}
+	nav ul ul {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		margin: 0 auto;
+		position: relative;
+		top: 100px;
+		opacity: 0;
+	}
+	nav ul li, nav ul ul li {
+		display: block;
+		height: 35px;
+	}
+	nav ul li:hover ul {
+		position: relative;
+		top: 100px;
+	}
+	.fa-sort-down {
+		display: none;
+	}
+	nav.open {
+		background: rgb(40,40,40);
+		clip-path: circle(1400px at 105% -10%);
+		-webkit-clip-path: circle(1400px at 105% -10%);
+		pointer-events: all;
+	}
+	nav .nav-form {
+		display: flex;
+		transition: opacity 0.5s ease 0.2s;
+		opacity: 0;
+	}
+	/*Efeitos fade: aparecem depois de opacidade 0*/
+	.nav-form.fade {
+		opacity: 1;
+	}
+	nav ul.fade {
+		opacity: 1;
+	}
+	.hamburger {
+		display: flex;
+	}
+	.hamburger.change {
+		transform: rotate(180deg);
+		transition: transform .3s ease-out;
+		position: fixed;
+		z-index: 99;
+		/*O hamburger vai rodar ao apertar nele*/
+	}
+	.line.changelines {
+		background: white;
+	}
+	section .rooms {
+		padding-top: 75px;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+	.roomsDescription {
+		width: 100%;
+		flex-wrap: wrap;
+		margin: 0 0 25px 0;
+	}
+	.roomsDescription h3 , .roomsDescription a {
+		margin-left: 30px;
+	}
+	.roomsDescription p {
+		margin: 30px;
+	}
+	.roomsContent {
+		width: 100%;
+		flex-wrap: wrap;
+	}
+	.roomsContent .rect {
+		width: 40%;
+		height: 250px;
+		margin: 5px;
+	}
+	.roomsContent .rect:hover img {
+		margin: 0px;
+	}
+	.rect .content {
+		position: relative;
+		margin-top: 170px;
+	}
+	section article {
+		margin-top: 100px;
+	}
+	section article .content {
+		width: 100%;
+	}
+	article .content .title-content p {
+		margin: 25px;
+	}
+	#news {
+		flex-direction: column;
+		width: 90%;
+		margin: 2em auto;
+	}
+	#news .newsContent {
+		width: 100%;
+		justify-content: center;
+	}
+	#news #newsForm {
+		width: 100%;
+		display: block;
+		margin: 0 0 15px 0;
+	}
+	#news #newsForm #nomeLabel {
+		width: 100%;
+		height: 45px;
+		display: block;
+	}
+	#news #newsForm #emailLabel {
+		width: 70%;
+		height: 45px;
+		display: flex;
+		margin: 10px 0 0 0;
+		float: left;
+	}
+	#news #newsForm label #newsNome {
+		width: 99%;
+	}
+	.errorNameMsg {
+		position: relative;
+	}
+	#news #newsForm label #newsEmail {
+		width: 100%;
+		position: absolute;
+		top: 0;
+	}
+	#news #newsForm #newsSubmit {
+		width: 15%;
+		margin: 10px 0 0 0;
+		float: right;
+		padding: 3px 0;
+	}
+	#news .newsContent p {
+		width: auto;
+	}
+	#news .newsContent h3 {
+		font-size: 30px;
+	}
+	.fa-times , .fa-check {
+		top: 12%;
+		transform: translateY(0);
+	}
+	#mainFooter {
+		width: 100%;
+	}
+	#footer-top {
+		padding: 0 30px;
+	}
+}
+
+@media screen and (max-width: 780px){
+	#Interface {
+		background-attachment: scroll;
+		/*imagem que vai se mover*/
+	}
+	#headerContent {
+		background-color: white;
+		background-image: none;
+		transition: linear 500ms;
+	}
+	header div {
+		margin: 0px;
+		justify-content: space-between;
+	}
+	#mainTitle {
+		color: black;
+	}
+	#mainTitle {
+		flex-wrap: wrap;
+		font-size: 25px;
+	}
+	#mainTitle , .interationArea {
+		position: relative;
+	}
+	.interationArea {
+		width: auto;
+		height: auto;
+	}
+	.btnPor , .btnIng , .btnSpn , .btnSearch{
+		display: none;
+	}
+	.hamburger {
+		height: 30px;
+	}
+	.first , .second , .third {
+		background: black;
+	}
+	.searchConteiner form , nav form {
+		width: 80%;
+	}
+	.searchConteiner #search-Txt{
+		font-size: 4vw;
+	}
+	nav .nav-form #search-Txt {
+		font-size: 12px;
+	}
+	article .content .title-content p {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	#contact, #more {
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	#contact div {	
+		margin: 10px;
+	}
+	#contact p {
+		flex-wrap: wrap;
+		font-size: 15px;
+	}
+	#more div {
+		width: 70px;
+		margin: 5px 10px;
+	}
+	#more h3 {
+		margin: 20px 10px 0 14px;
+		width: auto;
+		text-align: center;
+		font-size: 22px;
+	}
+	#more h4, ul{
+		font-size: 14px;
+		text-align: center;
+	}
+	#more li {
+		display: flex;
+		flex-direction: column;
+	}
+	.main p {
+		font-size: 11px;
+		text-align: center;
+		margin: 25px 15px 10px;
+	}
+	/*
+	- trocas a api por jquery  	
+	*/
+}
