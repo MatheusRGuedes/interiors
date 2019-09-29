@@ -266,6 +266,9 @@
 @media screen and (max-width: 780px){
 	.bannerDescription {
 		font-size: 2em;
+		font-weight: normal;
+		text-shadow: none;
+		margin: 2em 0 1em 0;
 	}
 	#Interface {
 		background-attachment: scroll;
