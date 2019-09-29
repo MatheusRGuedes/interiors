@@ -67,6 +67,12 @@
 	
 }
 @media screen and (max-width: 1000px) {
+	.bannerDescription {
+		width: 40%;
+		text-align: left;
+		left: 30px;
+		transform: translate(0,-50%);
+	}
 	#headerContent header {
 		padding: 10px 25px;
 	}	
@@ -258,6 +264,9 @@
 }
 
 @media screen and (max-width: 780px){
+	.bannerDescription {
+		font-size: 2em;
+	}
 	#Interface {
 		background-attachment: scroll;
 		/*imagem que vai se mover*/
