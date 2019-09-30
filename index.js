@@ -162,7 +162,6 @@ debounce = function(func, wait, immediate) {
 	//evita que seje ativada varias vezes a animeScroll
 	$(document).scroll(debounce(function() {
 		animeScroll();
-		console.log('teste');
-	}, 150));
+	}, 100));
 
 })();
