@@ -74,7 +74,7 @@ function verificar() {
 		errorNameMsg.innerHTML = 'Informe um nome válido'; 
 		erro1.classList.add('visible'); //FINALIZAR
 		
-		if (correct1.visible)
+		if (correct1.classList.contains('visible'))
 			correct1.classlist.remove('visible');
 	}
 	else {
