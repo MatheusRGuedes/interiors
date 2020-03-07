@@ -75,7 +75,7 @@ function verificar() {
 		erro1.classList.add('visible'); //FINALIZAR
 		
 		if (correct1.classList.contains('visible'))
-			correct1.classlist.remove('visible');
+			correct1.classList.remove('visible');
 	}
 	else {
 		var numeros = 0;
