@@ -73,7 +73,9 @@ function verificar() {
 	if (!isNaN(newsNome) || newsNome == "") {
 		errorNameMsg.innerHTML = 'Informe um nome válido'; 
 		erro1.classList.add('visible'); //FINALIZAR
-		correct1.classlist.remove('visible');
+		
+		if (correct1.visible)
+			correct1.classlist.remove('visible');
 	}
 	else {
 		var numeros = 0;
